@@ -1,0 +1,140 @@
+.pokedexContainer {
+
+    .searchFormContainer,
+    .pokemonItemsContainer {
+        width: 97%;
+
+        .labelForm {
+            font-size: 12px;
+            color: #909090;
+        }
+
+        -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+        box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+        padding: 10px;
+        margin: 20px;
+
+        h1 {
+            color: lightgray;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        .btn {
+            width: 100%;
+        }
+    }
+
+    .searchFormContainer {
+        .poke-search-form {
+            .input-text-container {
+                position: relative;
+                width: 100%;
+                ul {
+                    list-style-type: none;
+                    padding: 0;
+                    margin: 0;
+                    position: absolute;
+                    background-color: #fff;
+                    /* Set the background color */
+                    border: 1px solid #ccc;
+                    /* Add a border */
+                    max-height: 150px;
+                    /* Set a max height to limit the suggestions' height */
+                    overflow-y: auto;
+                    /* Enable vertical scroll if needed */
+                    z-index: 1;
+                    /* Ensure the suggestions appear above other elements */
+                    width: 100%;
+                    /* Set the width to match the input field */
+                }
+    
+                li {
+                    padding: 10px;
+                    cursor: pointer;
+    
+                    /* Add hover effect */
+                    &:hover {
+                        background-color: #f2f2f2;
+                    }
+                }
+            }
+        }
+    }
+
+    .pokemonItemsContainer {
+        display: flex;
+        max-width: 97%;
+        flex-wrap: wrap;
+
+        .likedPokemonIcon {
+            color: rgb(253, 207, 0);
+        }
+
+        .icon {
+            cursor: pointer;
+        }
+
+        .pokemonItem {
+            margin-top: 10px;
+            height: 250px;
+            width: 223px;
+            border: 1px solid #a3a3a3;
+            /* Add a border */
+            margin: 10px;
+
+            .favoriteIcon {
+                min-height: 25px;
+                top: 5px;
+                /* Adjust the top position as needed */
+                right: 5px;
+                /* Adjust the right position as needed */
+                color: rgb(189, 189, 189);
+                /* Set the color of the star icon */
+                z-index: 2;
+                /* Ensure it's above the image */
+            }
+
+            .imageContainer {
+                display: flex;
+                justify-content: center;
+                /* Center horizontally */
+                align-items: center;
+                /* Center vertically */
+                height: 100px;
+                /* Set the height of the container */
+                margin-top: -15px;
+            }
+
+            .pokemonId {
+                color: rgb(100, 94, 94);
+                font-weight: bolder;
+                font-size: 15px;
+                margin-top: 10px;
+                margin-left: 10px;
+            }
+
+            .pokemonName {
+                font-size: 25px;
+                font-weight: bold;
+                margin-top: -25px;
+                margin-left: 10px;
+            }
+
+            .pokemonDescription {
+                font-size: 14px;
+                /* Set font size */
+                text-align: justify;
+                /* Justify the text */
+                margin-top: -10px;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+        }
+
+        .pokemonItem img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+version: "3"
+services:
+  express-api:
+    build:
+      context: ./backend
+    ports:
+      - "5004:5004"
+    networks:
+      - mynetwork
+    depends_on:
+      - database
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - express-api
+  database:
+    image: mysql:latest
+    volumes:
+      - ./mysql-dump:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_ROOT_PASSWORD: my-secret-pw
+      MYSQL_DATABASE: PokemonDB
+    networks:
+      - mynetwork
+    ports:
+      - "3306:3306"
+networks:
+  mynetwork:

@@ -1,0 +1,44 @@
+.navbarContainer {
+    height: 50px;
+    border-bottom: 0.5px solid rgb(231, 228, 228);
+    display: flex;
+    align-items: center;
+    color: #555;
+
+    .wrapper {
+        display: flex;
+        padding: 20px;
+        align-items: center;
+        justify-content: right;
+        width: 100%;
+
+        .items {
+            display: flex;
+
+            .loginInput {
+                width: 100px;
+                margin: 5px;
+                background-color: rgb(230, 230, 230);
+                font-size: 13px;
+            }
+
+            .item {
+                display: flex;
+                align-items: center;
+                margin-right: 15px;
+
+                .icon {
+                    font-size: 30px;
+                    color: red;
+                    cursor: pointer;
+                }
+
+                .usernameDisplay {
+                    margin-right: 10px;
+                    font-weight: bolder;
+                }
+
+            }
+        }
+    }
+}
